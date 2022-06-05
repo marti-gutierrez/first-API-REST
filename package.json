@@ -1,0 +1,31 @@
+{
+  "name": "first-api-rest",
+  "version": "1.0.0",
+  "description": "aplicacion del curso de aplicaciones web",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martingh19/first-API-REST.git"
+  },
+  "keywords": [
+    "API-REST",
+    "flex",
+    "grid",
+    "javascript"
+  ],
+  "author": "Martin Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martingh19/first-API-REST/issues"
+  },
+  "homepage": "https://github.com/martingh19/first-API-REST#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.52.2"
+  }
+}
