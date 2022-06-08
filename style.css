@@ -24,116 +24,156 @@ body
     background-color: var(--background-color);
 }
 
-.card
+.menu
 {
-    max-inline-size: 470px;
-    border-radius: 10px;
-    margin: 120px auto;
-    border: 1px solid #dbdbdb;
-    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 100vh;
+    gap: 20px;
+}
+.aside
+{
+    grid-area: 1/1/-1/4;
+    background-color: #ffffff;
 }
 .container
 {
-    inline-size: 95%;
-    margin: 0 auto;
-    /* display: flex;
-    align-items: center; */
+    inline-size: 80%;
+    margin: 20px auto;
 }
 
-.card__header
-{
-    display: flex;
-    align-items: center;
-    block-size: 56px;
-}
-
-.card__figure-avatar
-{
-    inline-size: 42px;
-    block-size: 42px;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    border-radius: 50%;
-}
-.card__img-avatar
+.aside__logo
 {
     display: block;
-    inline-size: 90%;
-    margin: 2px auto;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-.card__name-perfil
-{
-    margin-inline-start: 10px;
-    font-weight: 700;
-    font-size: 1.4rem;
+    inline-size: 60px;
+    block-size: 60px;
+    margin-block-end: 20px;
 }
 
-.card__publication
+.perfil
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+    inline-size: 100%;
+    block-size: 260px;
+    margin-block-end: 20px;
+    border-block-end: 3px solid #dbdbdb;
+}
+.perfil::before
+{
+    grid-area: 1/1/-2/-1;
+    content: "";
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    ;
+}
+.perfil__img
+{
+    grid-area: 2/2/-1/4;
+    place-self: center;
+    inline-size: 90px;
+    block-size: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.perfil__texts
+{
+    grid-area: 3/4/-1/-1;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+article
+{
+    grid-area: 1/4/-1/-1;
+    
+
+}
+#btnReload
+{
+    padding: 10px 30px;
+    border: none;
+    background-color: #dbdbdb;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container-card
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-self: center;
+}
+
+.card
 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    inline-size: 320px;
+    border-radius: 10px;
+    /* margin: 120px auto; */
+    border: 1px solid #dbdbdb;
+    background-color: white;
+}
+
+
+.card__picture
+{
     inline-size: 100%;
-    block-size: 500px;
+    block-size: 300px;
     overflow: hidden;
+    border-radius: 10px 10px 0 0;
     background-color: #262626;
 }
-.card__img-publication
+
+.card__img
 {
-    
+    border-radius: 10px 10px 0 0;
     inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
 }
-
-.card__icons
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    block-size: 40px;
-}
-
-.card__icon
-{
-    display: inline-block;
-    color: #262626;
-    /* font-size: 30px; */
-    inline-size: 30px;
-    block-size: 30px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.card__icon--heart
-{
-    background-image: url('./assets/icons/bx-heart.svg');
-}
-.card__icon--comment
-{
-    background-image: url('./assets/icons/mode_comment.svg');
-}
-.card__icon--send
-{
-    background-image: url('./assets/icons/send.svg');
-}
-.card__icon--bookmark
-{
-    background-image: url('./assets/icons/bookmark.svg');
-}
-.card__icon--infinite
-{
-    background-image: url('./assets/icons/infinite.svg');
-    /* margin-inline-end: 50px; */
-}
-.card__icon--cat
-{
-    background-image: url('./assets/icons/cat-solid.svg');
-}
-
-.button
+.card__button
 {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-inline-end: 50px;
+    color: #262626;
+    font-size: 30px;
 }
+.card__button:hover
+{
+    color: crimson;
+}
+
+
+    /* .card__header
+    {
+        display: flex;
+        align-items: center;
+        block-size: 56px;
+    }
+    
+    .card__figure-avatar
+    {
+        inline-size: 42px;
+        block-size: 42px;
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+        border-radius: 50%;
+    }
+    .card__img-avatar
+    {
+        display: block;
+        inline-size: 90%;
+        margin: 2px auto;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    .card__name-perfil
+    {
+        margin-inline-start: 10px;
+        font-weight: 700;
+        font-size: 1.4rem;
+    } */
