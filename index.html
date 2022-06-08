@@ -11,41 +11,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="card">
-        <header class="card__header container">
-            <figure class="card__figure-avatar">
-                <img src="https://lh3.googleusercontent.com/ogw/ADea4I541EUuWEyI6hxTOKGsVO68QDE_7FSex53hN8b42w=s32-c-mo" alt="foto de perfil de michu" class="card__img-avatar">
-            </figure>
-            <h2 class="card__name-perfil">Michu miau</h2>
-        </header>
-        <figure class="card__publication">
-            <img src="" alt="foto de gatos aleatorios" class="card__img-publication" id="imagePrincipal">
-        </figure>
-        <footer class="card__footer container">
-            <header class="card__icons">
-                <div class="card__networks">
-                    <i class="card__icon card__icon--heart"></i>
-                    <i class="card__icon card__icon--comment"></i>
-                    <i class="card__icon card__icon--send"></i>
-                </div>
-                <button class="button" id="newImage">
-                    <i class="card__icon card__icon--infinite"></i>
+    <aside class="aside">
+        <img src="" alt="" class="aside__logo">
+        <section class="perfil">
+            <img src="" alt="" class="perfil__img">
+            <h2 class="perfil__name">Michi miau</h2>
+            <p class="perfil__description">You love it</p>
+        </section>
+        <div class="aside__cards">
+            <section class="card-love">
+                <figue class="card-love__picture">
+                    <img src="" alt="" class="card-love__img" id="love1">
+                </figue>
+                <button id="buttonDelete">
+                    <i class="fa-solid fa-trash card__icon"></i>
                 </button>
-                <i class="card__icon card__icon--bookmark"></i>
-            </header>
-            <!-- <main class="card__texts">
-                <h3 class="card__copy">25,7000 reproducciones</h3>
-                <h3 class="card__copy">Michu Miau</h3> <p>hola que tal</p>
-                <p class="card__comments">Ver los 47 comentarios</p>
-                <p class="card__time">HACE UNA HORA</p>
-            </main>
-            <footer class="card__comments">
-                <button><i class="card__icon card__icon--cat"></i></button>
-                <input type="text" placeholder="Agrega un comentario...">
-                <button>Publicar</button>
-            </footer> -->
-        </footer>
-    </section>
+            </section>
+        </div>
+    </aside>
+    <main class="container">
+        <section class="card">
+            <figure class="card__picture">
+                <img src="" alt="" class="card__img" id="like1">
+            </figure>
+            <footer class="card__icons">
+                <button class="card__button" id="loveButton">
+                    <i class="card__icon fa-regular fa-heart"></i>
+                </button>
+                <button class="card__button">
+                    <i class="card__icon fa-regular fa-bookmark"></i>
+                </button>
+            </footer>
+        </section>
+        <section class="card">
+            <figure class="card__picture">
+                <img src="" alt="" class="card__img">
+            </figure>
+            <footer class="card__icons">
+                <button class="card__button" id="loveButton">
+                    <i class="card__icon fa-regular fa-heart"></i>
+                </button>
+                <button class="card__button">
+                    <i class="fa-regular fa-bookmark"></i>
+                </button>
+            </footer>
+        </section>
+        <section class="card">
+            <figure class="card__picture">
+                <img src="" alt="" class="card__img">
+            </figure>
+            <footer class="card__icons">
+                <button class="card__button" id="loveButton">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="card__button">
+                    <i class="fa-regular fa-bookmark"></i>
+                </button>
+            </footer>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/88c8d89cd2.js" crossorigin="anonymous"></script>
     <script src="./main.js" type="module"></script>
 </body>
 </html>
