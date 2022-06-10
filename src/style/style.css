@@ -49,6 +49,28 @@ body
     block-size: 60px;
     margin-block-end: 20px;
 }
+.aside__grid
+{
+    display: grid;
+}
+
+.card-love
+{
+    inline-size: 100%;
+    display: flex;
+}
+
+.card-love__picture
+{
+    inline-size: 80%;
+    block-size: 100%;
+}
+.card-love__img
+{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
 
 .perfil
 {
@@ -85,13 +107,19 @@ body
     font-size: 1.8rem;
 }
 
-article
+.gallery
 {
     grid-area: 1/4/-1/-1;
-    
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    inline-size: 100%;
+    padding: 0 20px;
+    margin: 40px auto;
 }
-#btnReload
+.button
 {
     padding: 10px 30px;
     border: none;
@@ -99,11 +127,17 @@ article
     border-radius: 10px;
     cursor: pointer;
 }
+.button:hover
+{
+    background-color: #4158D0;
+    color: white;
+}
 .container-card
 {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-self: center;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 10px;
+    inline-size: 100%;
 }
 
 .card
@@ -111,7 +145,7 @@ article
     display: flex;
     flex-direction: column;
     justify-content: center;
-    inline-size: 320px;
+    inline-size: 100%;
     border-radius: 10px;
     /* margin: 120px auto; */
     border: 1px solid #dbdbdb;
@@ -148,6 +182,12 @@ article
     color: crimson;
 }
 
+
+.button--love
+{
+    /* display: inline-block; */
+    border-radius: 0 10px 10px 0;
+}
 
     /* .card__header
     {

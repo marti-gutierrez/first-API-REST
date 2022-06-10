@@ -1,21 +1,10 @@
-/**
- * en esta url el endpoints es: /images/search o /images
- * !Partes que faltan mejorar
- * !1. crear una función que modifique el DOM para crear una tarjeta de gatitos
- * !2. concatenar la url para los endPoints y parameters
- */
-const API = 'https://api.thecatapi.com/v1/images/search?limit=2&api_key=0ece5eaa-08dd-412b-9389-476feb8956b6';
-
-const API_URL_FAVORITES = 'https://api.thecatapi.com/v1/favourites?limit=2&api_key=0ece5eaa-08dd-412b-9389-476feb8956b6';
-
-
 // 2. seleccionar nuestro container (mount) donde pondremos las 3 imagenes de
 // las apis
 const appNode = document.querySelector('main.container-card');
 // 3. crear un array donde estaran todas nuestras cards.
 const allCards = [];
 
-const loadRandomMichis = async url_api =>
+export const loadRandomMichis = async url_api =>
 {
     const answer = await fetch(url_api);
     // 1. obtener elementos del array
@@ -50,19 +39,8 @@ const loadRandomMichis = async url_api =>
     })
 }
 
-const loadFavoritesMichis = async url =>{
+export const loadFavoritesMichis = async url =>{
     const answer = await fetch(url);
     const answerJSON = await answer.json();
     console.log(answerJSON);
 }
-
-
-const changeIMage = async () =>{
-    loadRandomMichis(API);
-}
-
-loadRandomMichis(API);
-loadFavoritesMichis(API_URL_FAVORITES);
-
-// newImage.addEventListener('click',changeIMage);
-btnReload.addEventListener('click',changeIMage);
