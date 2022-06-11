@@ -10,33 +10,40 @@ export const loadRandomMichis = async url_api =>
     // 1. obtener elementos del array
     const answerJSON = await answer.json();
     // like1.src = answerJSON[0].url
-    answerJSON.forEach(item => {
-        const image = document.createElement('img');
-        image.className = "card__img";
-        image.src = item.url;
-        image.alt = "imagen random de un gato";
-
-        const iconHeart = document.createElement('i');
-        iconHeart.className = "card__icon fa-regular fa-heart";
-
-        const figureFather = document.createElement('fig');
-        figureFather.className = "card__picture";
-
-        const button = document.createElement('button');
-        button.className = "card__button";
-        button.id = "loveButton";
-
-        const fatherContainer = document.createElement('section');
-        fatherContainer.className = "card";
-
-        figureFather.appendChild(image);
-        button.appendChild(iconHeart);
-        fatherContainer.append(figureFather,button);
-        //2. los agregamos a nuestro array de elementos
-        allCards.push(fatherContainer);
-        //3. una vez que estan todas las cards la agregamos al DOM.
-        appNode.append(...allCards);
-    })
+    if(answer.status !== 200)
+    {
+        spanError.innerHTML = `Hubo un error ${answer.status}`;
+    }
+    else
+    {
+        answerJSON.forEach(item => {
+            const image = document.createElement('img');
+            image.className = "card__img";
+            image.src = item.url;
+            image.alt = "imagen random de un gato";
+    
+            const iconHeart = document.createElement('i');
+            iconHeart.className = "card__icon fa-regular fa-heart";
+    
+            const figureFather = document.createElement('fig');
+            figureFather.className = "card__picture";
+    
+            const button = document.createElement('button');
+            button.className = "card__button";
+            button.id = "loveButton";
+    
+            const fatherContainer = document.createElement('section');
+            fatherContainer.className = "card";
+    
+            figureFather.appendChild(image);
+            button.appendChild(iconHeart);
+            fatherContainer.append(figureFather,button);
+            //2. los agregamos a nuestro array de elementos
+            allCards.push(fatherContainer);
+            //3. una vez que estan todas las cards la agregamos al DOM.
+            appNode.append(...allCards);
+        })
+    }
 }
 
 export const loadFavoritesMichis = async url =>{
